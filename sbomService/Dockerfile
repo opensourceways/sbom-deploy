@@ -6,7 +6,7 @@ RUN yum update -y && yum install -y \
     && rm -rf /var/cache/yum
 
 WORKDIR /opt
-RUN git clone --recurse-submodules https://github.com/huanceng/sbom-service.git
+RUN git clone --recurse-submodules https://github.com/opensourceways/sbom-service.git
 WORKDIR /opt/sbom-service
 RUN /bin/bash gradlew bootWar
 
