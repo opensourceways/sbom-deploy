@@ -3,7 +3,9 @@ FROM openeuler/openeuler:22.03-lts AS build
 RUN yum update -y && yum install -y \
     git \
     java-17-openjdk \
-    && rm -rf /var/cache/yum
+    python3-pip \
+    && rm -rf /var/cache/yum \
+    && pip3 install virtualenv
 
 WORKDIR /opt
 RUN git clone --recurse-submodules https://github.com/opensourceways/sbom-service.git
