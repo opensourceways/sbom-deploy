@@ -5,6 +5,8 @@ FROM node:lts-alpine
 WORKDIR /sbom-website
 COPY --from=0 /sbom-website /sbom-website
 
+ENV NODE_OPTIONS="--openssl-legacy-provider"
+
 RUN npm config set registry https://registry.npmmirror.com/ \
     && npm install -g @vue/cli \
     && npm install -g http-server \
