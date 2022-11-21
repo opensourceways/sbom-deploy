@@ -3,6 +3,8 @@
 
 ## Run in Docker
 
+**Replace *BRANCH* in Dockerfile with specific branch**
+
 Database configures, such as *host/port/db_name* are passed to the container via
 environment variables.
 
@@ -36,6 +38,8 @@ Sensitive data, such as *password*, are passed by *docker secret*.
     ```
 
 # sbom-website
+
+**Replace *BRANCH* in Dockerfile with specific branch**
 
 1. `docker build -t sbom-website .`
 2. `docker run -d -p 8080:8080 sbom-website`
