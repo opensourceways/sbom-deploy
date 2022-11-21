@@ -1,5 +1,5 @@
 FROM bitnami/git
-RUN git clone https://github.com/opensourceways/sbom-website.git
+RUN git clone https://github.com/opensourceways/sbom-website.git -b BRANCH
 
 FROM node:lts-alpine
 WORKDIR /sbom-website

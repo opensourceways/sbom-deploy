@@ -8,7 +8,7 @@ RUN yum update -y && yum install -y \
     && pip3 install virtualenv
 
 WORKDIR /opt
-RUN git clone --recurse-submodules https://github.com/opensourceways/sbom-service.git
+RUN git clone --recurse-submodules https://github.com/opensourceways/sbom-service.git -b BRANCH
 WORKDIR /opt/sbom-service
 RUN /bin/bash gradlew bootWar
 
