@@ -4,6 +4,8 @@ RUN yum update -y && yum install -y \
     git \
     java-17-openjdk \
     python3-pip \
+    python3-devel \
+    gcc \
     && rm -rf /var/cache/yum \
     && pip3 install virtualenv
 
